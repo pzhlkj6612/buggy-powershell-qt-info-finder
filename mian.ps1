@@ -40,7 +40,7 @@ Write-Output -InputObject "Got Qt toolchain architecture: ${TOOLCHAIN_ARCH}"
 
 
 ${release_info_download_url} = `
-    Invoke-WebRequest https://api.github.com/repos/pzhlkj6612/qt-windows-x86-desktop-msvc-mingw-compatibility-finder/releases/latest | `
+    Invoke-WebRequest 'https://api.github.com/repos/pzhlkj6612/qt-windows-x86-desktop-msvc-mingw-compatibility-finder/releases/latest' | `
     Select-Object -ExpandProperty 'Content' | `
     ConvertFrom-Json | `
     Select-Object -ExpandProperty 'assets' | `
